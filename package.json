@@ -1,10 +1,10 @@
 {
   "name": "typescript-standard",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Zero-configuration TypeScript Standard Validation",
   "main": "./bin",
   "bin": {
-    "standard": "./bin/cli.js"
+    "standard": "./bin/cmd"
   },
   "scripts": {
     "build": "npm run build:clean && npm run build:webpack",
