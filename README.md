@@ -29,8 +29,8 @@ CLI at project root folder
 or in your code
 
 ```node
-var results = require('typescript-standard')
-console.log(results);
+var engine = require('typescript-standard')
+console.log(engine.lint());
 ```
 
 ## Tips
