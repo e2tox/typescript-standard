@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "lib": ["es2016"],
+    "outDir": "bin",
+    "module": "commonjs",
+    "removeComments": true,
+    "moduleResolution": "node",
+    "typeRoots": [
+      "node_modules/@types/"
+    ],
+    "types": [
+      "node"
+    ]
+  },
+  "formatterOptions": {
+    "IndentSize": 4,
+    "TabSize": 4,
+    "NewLineCharacter": "\r\n",
+    "ConvertTabsToSpaces": true,
+    "InsertSpaceAfterCommaDelimiter": true,
+    "InsertSpaceAfterSemicolonInForStatements": true,
+    "InsertSpaceBeforeAndAfterBinaryOperators": true,
+    "InsertSpaceAfterKeywordsInControlFlowStatements": true,
+    "InsertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+    "InsertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": false,
+    "PlaceOpenBraceOnNewLineForFunctions": false,
+    "PlaceOpenBraceOnNewLineForControlBlocks": false
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
