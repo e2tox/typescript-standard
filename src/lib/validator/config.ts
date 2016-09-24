@@ -49,7 +49,7 @@ export class ValidatorConfigParser {
     }
 
     // Added in typescript 2.0
-    if (config.exclude && config.files.forEach) {
+    if (config.exclude && config.exclude.forEach) {
       config.exclude.forEach(function (file) {
         if (file && (file.indexOf('*') >= 0 || file.indexOf('?') >= 0)) {
           excludes = excludes.concat(glob.sync(path.join(rootDir, file)))

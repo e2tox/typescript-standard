@@ -1,6 +1,6 @@
 {
   "name": "typescript-standard",
-  "version": "0.2.3",
+  "version": "0.2.5",
   "description": "Zero-configuration TypeScript Standard Validation",
   "main": "./bin",
   "bin": {
@@ -13,6 +13,7 @@
   },
   "files": [
     "bin/cli.js",
+    "bin/cmd",
     "bin/index.js",
     "LICENSE",
     "README.md",
