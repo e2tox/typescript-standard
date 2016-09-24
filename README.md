@@ -43,6 +43,9 @@ export PATH=$PATH:node_modules/.bin
 
 ## Updates
 
+### 0.2.5
+  - Bug fixing
+
 ### 0.2.1
   - Add `--pretty` and `--verbose` output style from cli
   - Rewrite this project in typescript
