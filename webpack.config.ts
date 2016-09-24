@@ -1,5 +1,6 @@
 import * as path from 'path'
 import * as fs from 'fs'
+import * as webpack from 'webpack'
 
 declare var __dirname;
 const projectRoot = __dirname;
@@ -34,7 +35,12 @@ export default [{
     ]
   },
   plugins: [
-    /* optimization plugins here */
+    new webpack.BannerPlugin('#!/usr/bin/env node', { raw: 1, entryOnly: 1 }),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false
+      }
+    })
   ]
 },
   {
@@ -60,7 +66,11 @@ export default [{
       ]
     },
     plugins: [
-      /* optimization plugins here */
+      new webpack.optimize.UglifyJsPlugin({
+        compress: {
+          warnings: false
+        }
+      })
     ]
   }
 ]

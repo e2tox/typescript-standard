@@ -14,6 +14,11 @@ const isVerboseFlag = parameters.includes('--verbose');
 
 let files = null;
 
+if (parseInt(process.version.match(/v(\d+)\./)[1], 10) < 4) {
+  console.error('standard: Node v4 or greater is required. `standard` did not run.');
+  process.exit(1);
+}
+
 if (otherParameters.length) {
   files = expend(otherParameters);
 }
