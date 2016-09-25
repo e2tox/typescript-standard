@@ -1,2 +1,1 @@
-import {lint, pretty} from '../lib'
-export {lint, pretty}
+export {lint, pretty} from '../lib'
