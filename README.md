@@ -41,6 +41,12 @@ Here is a easier way to run local node_modules by adding the .bin folder into yo
 export PATH=$PATH:node_modules/.bin
 ```
 
+## Roadmap
+  * [x] TypeScript Code Standard Validation (TSLint)
+  * [ ] TypeScript Code Standard Autofix (TSLint? maybe)
+  * [ ] TypeScript Code Import Formatter (ts-format-imports)
+  * [ ] TypeScript Code Pretty Printer (tsc)
+
 ## Updates
 
 ### 0.2.6
