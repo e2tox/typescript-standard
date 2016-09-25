@@ -43,9 +43,9 @@ export PATH=$PATH:node_modules/.bin
 
 ## Roadmap
   * [x] TypeScript Code Standard Validation (TSLint)
-  * [ ] TypeScript Code Standard Autofix (TSLint? maybe)
-  * [ ] TypeScript Code Import Formatter (ts-format-imports)
-  * [ ] TypeScript Code Pretty Printer (tsc)
+  * [ ] 0.3.x TypeScript Code Pretty Printer (tsc)
+  * [ ] 0.4.x TypeScript Code Import Formatter (ts-format-imports)
+  * [ ] 0.5.x TypeScript Code Standard Autofix (TSLint? maybe)
 
 ## Updates
 
