@@ -1,4 +1,4 @@
-# Zero-configuration TypeScript Standard Validator and Pretty Printer
+# Zero-configuration TypeScript Standard Validator
 
 ## Installation
 
