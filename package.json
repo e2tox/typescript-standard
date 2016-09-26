@@ -1,15 +1,16 @@
 {
   "name": "typescript-standard",
-  "version": "0.2.7",
+  "version": "0.2.12",
   "description": "Zero-configuration TypeScript Standard Validation",
-  "main": "./bin",
+  "main": "./bin/index.js",
   "bin": {
     "standard": "./bin/cli.js"
   },
   "scripts": {
     "build": "npm run build:clean && npm run build:webpack",
     "build:clean": "rm -f ./bin/*.js",
-    "build:webpack": "node_modules/.bin/webpack --display-error-details --config ./webpack.config.ts"
+    "build:webpack": "node_modules/.bin/webpack --display-error-details --config ./webpack.config.ts",
+    "prepublish": "npm run build"
   },
   "files": [
     "bin/cli.js",

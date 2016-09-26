@@ -2,10 +2,9 @@
 .idea/
 npm-debug.log
 node_modules/
-dist/
 bin/*.js
 bin/*.js.map
-bin/*.d.ts
+src/*.d.ts
 src/*.js
 src/*.js.map
 src/*.d.ts
