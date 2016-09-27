@@ -49,6 +49,9 @@ export PATH=$PATH:node_modules/.bin
 
 ## Updates
 
+### 0.2.12
+  - Bug fixing
+
 ### 0.2.6
   - 100% typescript!!!
 
