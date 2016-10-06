@@ -1,6 +1,6 @@
 {
   "name": "typescript-standard",
-  "version": "0.2.13",
+  "version": "0.2.14",
   "description": "Zero-configuration TypeScript Standard Validation",
   "main": "./bin/index.js",
   "bin": {
@@ -51,6 +51,7 @@
     "webpack": "latest"
   },
   "dependencies": {
+    "glob": "latest",
     "tslint": "latest",
     "typescript": "latest"
   }
