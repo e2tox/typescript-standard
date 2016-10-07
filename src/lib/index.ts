@@ -1,3 +1,4 @@
+import '../lib/utils/polyfill'
 import {ValidatorConfigParser, Validator} from '../lib/validator'
 import {IOptions} from './option'
 import {ValidatorOutputFormat} from './validator/format'
