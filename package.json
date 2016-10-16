@@ -1,13 +1,13 @@
 {
   "name": "typescript-standard",
-  "version": "0.2.18",
+  "version": "0.2.19",
   "description": "Zero-configuration TypeScript Standard Validation",
-  "main": "./release/lib/index.js",
+  "main": "./bin/index.js",
   "bin": {
-    "standard": "./bin/cli"
+    "standard": "./bin/cli.js"
   },
   "scripts": {
-    "build": "npm run build:clean && npm run build:tsc",
+    "build": "npm run build:clean && npm run build:webpack",
     "build:clean": "rm -f ./bin/*.js",
     "build:tsc": "node_modules/.bin/tsc -p tsconfig.release.json",
     "build:webpack": "node_modules/.bin/webpack --display-error-details --config ./webpack.config.ts",
@@ -15,7 +15,6 @@
   },
   "files": [
     "bin",
-    "release",
     "LICENSE",
     "README.md",
     "tslint.json"

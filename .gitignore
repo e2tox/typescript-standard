@@ -2,4 +2,4 @@
 .idea/
 npm-debug.log
 node_modules/
-release/
+bin/

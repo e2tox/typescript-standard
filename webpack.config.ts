@@ -35,12 +35,12 @@ export default [{
     ]
   },
   plugins: [
-    new webpack.BannerPlugin('#!/usr/bin/env node', { raw: 1, entryOnly: 1 }),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
-      }
-    })
+    new webpack.BannerPlugin('#!/usr/bin/env node', { raw: 1, entryOnly: 1 })
+    // new webpack.optimize.UglifyJsPlugin({
+    //   compress: {
+    //     warnings: false
+    //   }
+    // })
   ]
 },
   {
@@ -66,11 +66,11 @@ export default [{
       ]
     },
     plugins: [
-      new webpack.optimize.UglifyJsPlugin({
-        compress: {
-          warnings: false
-        }
-      })
+      // new webpack.optimize.UglifyJsPlugin({
+      //   compress: {
+      //     warnings: false
+      //   }
+      // })
     ]
   }
 ]
