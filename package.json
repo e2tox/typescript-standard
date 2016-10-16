@@ -1,6 +1,9 @@
 {
   "name": "typescript-standard",
-  "version": "0.2.19",
+  "version": "0.2.20",
+  "engines" : {
+    "node" : ">=4.0.0"
+  },
   "description": "Zero-configuration TypeScript Standard Validation",
   "main": "./bin/index.js",
   "bin": {
