@@ -1,16 +1,16 @@
-import {lint} from '../lib'
-import {ValidatorOutputFormat} from '../lib/validator/format'
+import { lint } from '../lib'
+import { ValidatorOutputFormat } from '../lib/validator/format'
 import * as process from 'process'
-import {expend} from '../lib/utils'
-import {ValidatorCallback} from '../lib/option'
-import {ValidateResult} from '../lib/validator/result'
+import { expend, includesInArray, startsWith } from '../lib/utils'
+import { ValidatorCallback } from '../lib/option'
+import { ValidateResult } from '../lib/validator/result'
 
 // const intercepter = process.argv[0];
 // const entry = process.argv[1];
 const parameters = process.argv.slice(2);
-const otherParameters = parameters.filter(p => !p.startsWith('-'));
-const isPrettyFlag = parameters.includes('--pretty');
-const isVerboseFlag = parameters.includes('--verbose');
+const otherParameters = parameters.filter(p => !startsWith(p, '-'));
+const isPrettyFlag = includesInArray(parameters, '--pretty');
+const isVerboseFlag = includesInArray(parameters, '--verbose');
 
 let files = null;
 

@@ -2,12 +2,4 @@
 .idea/
 npm-debug.log
 node_modules/
-bin/*.js
-bin/*.js.map
-src/*.d.ts
-src/*.js
-src/*.js.map
-src/*.d.ts
-src/**/*.js
-src/**/*.js.map
-src/**/*.d.ts
+release/

@@ -53,3 +53,35 @@ export function expend(files: Array<string>): Array<string> {
   }
   return expended;
 }
+
+export function includesInArray(arrayList, searchElement): boolean {
+  
+  var O = Object(arrayList);
+  var len = parseInt(O.length, 10) || 0;
+  if (len === 0) {
+    return false;
+  }
+  var n = parseInt(arguments[1], 10) || 0;
+  var k;
+  if (n >= 0) {
+    k = n;
+  } else {
+    k = len + n;
+    if (k < 0) {k = 0;}
+  }
+  var currentElement;
+  while (k < len) {
+    currentElement = O[k];
+    if (searchElement === currentElement ||
+      (searchElement !== searchElement && currentElement !== currentElement)) { // NaN !== NaN
+      return true;
+    }
+    k++;
+  }
+  return false;
+  
+}
+
+export function startsWith(source: string, searchElement: string): boolean {
+  return source.indexOf(searchElement) === 0;
+}

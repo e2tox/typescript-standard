@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "es5"
+    ],
+    "declaration": true,
+    "module": "commonjs",
+    "newLine": "LF",
+    "removeComments": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "outDir": "release",
+    "pretty": true
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "src/**/*.spec.ts"
+  ]
+}
