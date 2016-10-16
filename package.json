@@ -1,10 +1,10 @@
 {
   "name": "typescript-standard",
-  "version": "0.2.17",
+  "version": "0.2.18",
   "description": "Zero-configuration TypeScript Standard Validation",
   "main": "./release/lib/index.js",
   "bin": {
-    "standard": "./release/bin/cli.js"
+    "standard": "./bin/cli"
   },
   "scripts": {
     "build": "npm run build:clean && npm run build:tsc",
@@ -14,6 +14,7 @@
     "prepublish": "npm run build"
   },
   "files": [
+    "bin",
     "release",
     "LICENSE",
     "README.md",
