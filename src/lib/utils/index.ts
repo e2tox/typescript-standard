@@ -56,20 +56,22 @@ export function expend(files: Array<string>): Array<string> {
 
 export function includesInArray(arrayList, searchElement): boolean {
   
-  var O = Object(arrayList);
-  var len = parseInt(O.length, 10) || 0;
+  const O = Object(arrayList);
+  const len = parseInt(O.length, 10) || 0;
   if (len === 0) {
     return false;
   }
-  var n = parseInt(arguments[1], 10) || 0;
-  var k;
+  const n = parseInt(arguments[1], 10) || 0;
+  let k;
   if (n >= 0) {
     k = n;
   } else {
     k = len + n;
-    if (k < 0) {k = 0;}
+    if (k < 0) {
+      k = 0;
+    }
   }
-  var currentElement;
+  let currentElement;
   while (k < len) {
     currentElement = O[k];
     if (searchElement === currentElement ||

@@ -1,1 +1,1 @@
-export {lint, pretty} from '../lib'
+export { lint, pretty } from '../lib'

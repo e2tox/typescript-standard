@@ -1,18 +1,17 @@
 import * as tslint from 'tslint'
 import * as fs from 'fs'
-import {ValidatorOption} from './option'
-import {LintResult} from 'tslint/lib/lint'
-import {ValidateResult} from './result'
+import { ValidatorOption } from './option'
+import { ValidateResult } from './result'
 
 // integrate tslint to validate ts file
 export class Validator {
-
+  
   validatorOption: ValidatorOption;
-
+  
   constructor(validatorOption: ValidatorOption) {
     this.validatorOption = validatorOption;
   }
-
+  
   validate(file: string): ValidateResult {
     if (!fs.existsSync(file)) {
       console.error(`Unable to open file: ${file}`);
@@ -22,8 +21,5 @@ export class Validator {
     const linter = new tslint(file, contents, this.validatorOption.options());
     return new ValidateResult(linter.lint());
   }
-
+  
 }
-
-
-

@@ -1,5 +1,5 @@
-import {ValidatorOutputFormat} from './validator/format'
-import {ValidateResult} from './validator/result'
+import { ValidatorOutputFormat } from './validator/format'
+import { ValidateResult } from './validator/result'
 
 export interface ValidatorCallback {
   (result: ValidateResult): boolean;
