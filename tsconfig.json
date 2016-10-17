@@ -15,21 +15,21 @@
     ]
   },
   "formatterOptions": {
-    "IndentSize": 4,
-    "TabSize": 4,
-    "NewLineCharacter": "\r\n",
+    "IndentSize": 2,
+    "TabSize": 2,
+    "NewLineCharacter": "\r",
     "ConvertTabsToSpaces": true,
     "InsertSpaceAfterCommaDelimiter": true,
     "InsertSpaceAfterSemicolonInForStatements": true,
     "InsertSpaceBeforeAndAfterBinaryOperators": true,
     "InsertSpaceAfterKeywordsInControlFlowStatements": true,
-    "InsertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+    "InsertSpaceAfterFunctionKeywordForAnonymousFunctions": true,
     "InsertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": false,
     "PlaceOpenBraceOnNewLineForFunctions": false,
     "PlaceOpenBraceOnNewLineForControlBlocks": false
   },
   "include": [
-    "src/**/*.ts"
+    "**/*.ts"
   ],
   "exclude": [
     "node_modules"

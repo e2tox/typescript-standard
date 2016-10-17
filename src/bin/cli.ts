@@ -1,11 +1,11 @@
-import { lint } from '../lib'
-import { ValidatorOutputFormat } from '../lib/validator/format'
 import * as process from 'process'
+import { lint, pretty } from '../lib'
+import { ValidatorOutputFormat } from '../lib/validator/format'
 import { expend, includesInArray, startsWith } from '../lib/utils'
 import { ValidatorCallback } from '../lib/option'
 import { ValidateResult } from '../lib/validator/result'
 
-// const intercepter = process.argv[0];
+// const interceptor = process.argv[0];
 // const entry = process.argv[1];
 const parameters = process.argv.slice(2);
 const otherParameters = parameters.filter(p => !startsWith(p, '-'));
@@ -47,4 +47,5 @@ let callback: ValidatorCallback = function (result: ValidateResult) {
   return false;
 };
 
-lint({format, files, callback});
+lint({ format, files, callback });
+pretty({ files });

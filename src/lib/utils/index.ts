@@ -44,6 +44,14 @@ export function load(file): any {
   }
 }
 
+export function loadText(file: string): any {
+  return fs.readFileSync(file, 'utf8');
+}
+
+export function saveText(file: string, content: string): any {
+  return fs.writeFileSync(file, content, 'utf8');
+}
+
 export function expend(files: Array<string>): Array<string> {
   let expended: Array<string> = [];
   if (files && files.forEach) {
@@ -55,7 +63,7 @@ export function expend(files: Array<string>): Array<string> {
 }
 
 export function includesInArray(arrayList, searchElement): boolean {
-  
+
   const O = Object(arrayList);
   const len = parseInt(O.length, 10) || 0;
   if (len === 0) {
@@ -81,7 +89,7 @@ export function includesInArray(arrayList, searchElement): boolean {
     k++;
   }
   return false;
-  
+
 }
 
 export function startsWith(source: string, searchElement: string): boolean {

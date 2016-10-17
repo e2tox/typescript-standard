@@ -5,7 +5,7 @@ import { ValidatorOption } from './option'
 import { ValidatorOutputFormat } from './format'
 
 export class ValidatorConfigParser {
-  
+
   options(format: ValidatorOutputFormat): ValidatorOption {
     const defaultTSLintOptions = findup('tslint.json');
     if (!defaultTSLintOptions) {
@@ -14,28 +14,28 @@ export class ValidatorConfigParser {
     const configuration = load(defaultTSLintOptions);
     return new ValidatorOption(format, configuration);
   }
-  
+
   files(): Array<string> {
-    
+
     const userTSConfig = find('tsconfig.json');
     if (!userTSConfig) {
       return [];
     }
-    
+
     const config = load(userTSConfig);
     const rootDir = path.dirname(userTSConfig);
     let includes: Array<string> = [];
     let excludes: Array<string> = [];
     let excludeFiles: Array<string> = [];
     let excludeFolders: Array<string> = [];
-    
+
     // https://www.typescriptlang.org/docs/handbook/tsconfig-json.html
     if (config.files && config.files.forEach) {
       config.files.forEach(function (file) {
         includes.push(path.join(rootDir, file));
       })
     }
-    
+
     // Added in typescript 2
     if (config.include && config.include.forEach) {
       config.include.forEach(function (file) {
@@ -47,7 +47,7 @@ export class ValidatorConfigParser {
         }
       })
     }
-    
+
     // Added in typescript 2.0
     if (config.exclude && config.exclude.forEach) {
       config.exclude.forEach(function (file) {
@@ -78,7 +78,7 @@ export class ValidatorConfigParser {
         });
       }
     }
-    
+
     // filter results
     return includes.filter(function (file) {
       // filter file
@@ -93,5 +93,5 @@ export class ValidatorConfigParser {
       return !matches.length;
     });
   }
-  
+
 }

@@ -31,7 +31,7 @@ export default [{
   },
   module: {
     loaders: [
-      {test: /\.ts$/, loader: 'ts-loader'}
+      { test: /\.ts$/, loader: 'ts-loader' }
     ]
   },
   plugins: [
@@ -43,34 +43,34 @@ export default [{
     // })
   ]
 },
-  {
-    target: 'node',
-    entry: {
-      index: './src/bin/index.ts'
-    },
-    output: {
-      path: path.join(projectRoot, 'bin'),
-      filename: '[name].js',
-      libraryTarget: 'commonjs'
-    },
-    node: {
-      __dirname: false
-    },
-    externals: externalNodeModules,
-    resolve: {
-      extensions: ['', '.ts']
-    },
-    module: {
-      loaders: [
-        {test: /\.ts$/, loader: 'ts-loader'}
-      ]
-    },
-    plugins: [
-      // new webpack.optimize.UglifyJsPlugin({
-      //   compress: {
-      //     warnings: false
-      //   }
-      // })
+{
+  target: 'node',
+  entry: {
+    index: './src/bin/index.ts'
+  },
+  output: {
+    path: path.join(projectRoot, 'bin'),
+    filename: '[name].js',
+    libraryTarget: 'commonjs'
+  },
+  node: {
+    __dirname: false
+  },
+  externals: externalNodeModules,
+  resolve: {
+    extensions: ['', '.ts']
+  },
+  module: {
+    loaders: [
+      { test: /\.ts$/, loader: 'ts-loader' }
     ]
-  }
+  },
+  plugins: [
+    // new webpack.optimize.UglifyJsPlugin({
+    //   compress: {
+    //     warnings: false
+    //   }
+    // })
+  ]
+}
 ]
