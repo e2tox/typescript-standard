@@ -48,4 +48,7 @@ let callback: ValidatorCallback = function (result: ValidateResult) {
 };
 
 lint({ format, files, callback });
-pretty({ files });
+
+if (isPrettyFlag) {
+  pretty({ files });
+}

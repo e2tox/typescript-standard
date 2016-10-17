@@ -49,6 +49,9 @@ export PATH=$PATH:node_modules/.bin
 
 ## Updates
 
+### 0.3.2
+  - Format ts files when you run `standard --pretty`
+
 ### 0.2.12
   - Bug fixing
 
