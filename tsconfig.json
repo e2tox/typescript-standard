@@ -17,16 +17,21 @@
   "formatterOptions": {
     "IndentSize": 2,
     "TabSize": 2,
-    "NewLineCharacter": "\r",
+    "NewLineCharacter": "\n",
     "ConvertTabsToSpaces": true,
     "InsertSpaceAfterCommaDelimiter": true,
     "InsertSpaceAfterSemicolonInForStatements": true,
     "InsertSpaceBeforeAndAfterBinaryOperators": true,
     "InsertSpaceAfterKeywordsInControlFlowStatements": true,
     "InsertSpaceAfterFunctionKeywordForAnonymousFunctions": true,
+    "InsertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+    "InsertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": false,
+    "InsertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": false,
     "InsertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": false,
+    "InsertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": false,
     "PlaceOpenBraceOnNewLineForFunctions": false,
-    "PlaceOpenBraceOnNewLineForControlBlocks": false
+    "PlaceOpenBraceOnNewLineForControlBlocks": false,
+    "InsertSpaceAfterTypeAssertion": true
   },
   "include": [
     "**/*.ts"
