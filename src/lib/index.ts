@@ -39,9 +39,11 @@ export function pretty(opts) {
 
   if (files && files.length && formatter) {
     return files.map(function (file) {
-      const result = formatter.format(file);
-      console.log(file, ': formatted');
-      return { file, format: result };
+      const formatted = formatter.format(file);
+      if (formatted) {
+        console.log(file, ': formatted');
+      }
+      return { file, format: formatted };
     })
   }
 
