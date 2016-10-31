@@ -1,6 +1,6 @@
 {
   "name": "typescript-standard",
-  "version": "0.3.6",
+  "version": "0.3.8",
   "engines": {
     "node": ">=4.0.0"
   },
@@ -52,8 +52,8 @@
     "@types/webpack": "latest",
     "ts-loader": "latest",
     "ts-node": "latest",
-    "webpack": "latest",
-    "typescript-standard": "latest"
+    "typescript-standard": "latest",
+    "webpack": "latest"
   },
   "dependencies": {
     "glob": "latest",
