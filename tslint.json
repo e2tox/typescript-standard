@@ -76,7 +76,6 @@
     ],
     "align": [
       true,
-      "arguments",
       "parameters"
     ],
     "class-name": true,
