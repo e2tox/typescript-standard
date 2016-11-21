@@ -1,6 +1,5 @@
 import * as process from 'process'
 import { lint, pretty } from '../lib'
-import { ValidatorOutputFormat } from '../lib/validator/format'
 import { expend, includesInArray, startsWith } from '../lib/utils'
 import { ValidatorCallback } from '../lib/option'
 import { ValidateResult } from '../lib/validator/result'
@@ -23,24 +22,25 @@ if (otherParameters.length) {
   files = expend(otherParameters);
 }
 
-let format = ValidatorOutputFormat.PROSE_OUTPUT;
+let format = 'prose';
 if (isPrettyFlag) {
-  format = ValidatorOutputFormat.STYLISH_OUTPUT;
+  format = 'stylish';
 }
 else if (isVerboseFlag) {
-  format = ValidatorOutputFormat.VERBOSE_OUTPUT;
+  format = 'verbose';
 }
 
 let callback: ValidatorCallback = function (result: ValidateResult) {
   if (result.failureCount > 0) {
+    // TSLINT not support fix
     // let fixable = false;
     // if (result.failures && result.failures.length) {
     //   result.failures.forEach(f => {
     //     if (f.hasFix()) {
-    //       fixable = true;
+    //       console.log('has fix', f);
+    //       // fixable = true;
     //     }
     //   });
-    //   console.log('TSLINT NOT SUPPORT THIS YET');
     // }
     console.log(result.output);
   }

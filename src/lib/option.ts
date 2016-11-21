@@ -1,4 +1,3 @@
-import { ValidatorOutputFormat } from './validator/format'
 import { ValidateResult } from './validator/result'
 
 export interface ValidatorCallback {
@@ -6,7 +5,7 @@ export interface ValidatorCallback {
 }
 
 export interface IOptions {
-  format?: ValidatorOutputFormat
+  format?: string,
   files?: Array<string>
   callback?: ValidatorCallback
 }

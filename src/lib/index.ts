@@ -1,6 +1,5 @@
 import { ValidatorConfigParser, Validator } from '../lib/validator'
 import { IOptions } from './option'
-import { ValidatorOutputFormat } from './validator/format'
 import { ValidateResult } from './validator/result'
 import { FormatterConfigParser } from './formatter/config'
 import { Formatter } from './formatter/formatter';
@@ -10,7 +9,7 @@ export function lint(opts: IOptions = {}): Array<ValidateResult> {
 
   const parser = new ValidatorConfigParser();
   const files = opts.files && opts.files.length ? opts.files : parser.files();
-  const options = parser.options(opts.format || ValidatorOutputFormat.JSON_OUTPUT);
+  const options = parser.options(opts.format || 'json');
 
   if (files && files.length && options) {
     const validator = new Validator(options);

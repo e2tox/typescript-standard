@@ -1,5 +1,5 @@
-import { LintResult } from 'tslint/lib/lint'
-import { RuleFailure } from 'tslint/lib/language/rule/rule'
+import { LintResult } from 'tslint'
+import { RuleFailure } from 'tslint'
 
 export class ValidateResult {
 

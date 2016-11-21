@@ -1,23 +1,26 @@
-import { ILinterOptionsRaw } from 'tslint/lib/lint'
-import { ValidatorOutputFormat } from './format'
+import { ILinterOptions } from 'tslint'
+import { ValidatorOutputFormat } from './format';
+import { IConfigurationFile } from 'tslint/lib/configuration';
 
 export class ValidatorOption {
 
-  configuration?: any;
-  formatter?: string | Function;
+  configuration?: IConfigurationFile;
+  formatter?: Function;
   formattersDirectory?: string;
   rulesDirectory?: string | string[];
 
-  constructor(format: ValidatorOutputFormat, configuration: any) {
-    this.formatter = format.toString();
+  constructor(format: string, configuration: IConfigurationFile) {
+    this.formatter = ValidatorOutputFormat.getFormatter(format);
     this.configuration = configuration;
   }
 
-  options(): ILinterOptionsRaw {
+  options(): ILinterOptions {
     return {
-      configuration: this.configuration,
+      fix: true,
       formatter: this.formatter
-    }
+      // formattersDirectory?: string,
+      // rulesDirectory?: string | string[],
+    };
   }
 
 }

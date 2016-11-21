@@ -2,11 +2,10 @@ import * as path from 'path'
 import * as glob from 'glob'
 import { findup, find, load, isDirectory, includesInArray, startsWith } from '../utils'
 import { ValidatorOption } from './option'
-import { ValidatorOutputFormat } from './format'
 
 export class ValidatorConfigParser {
 
-  options(format: ValidatorOutputFormat): ValidatorOption {
+  options(format: string): ValidatorOption {
     const defaultTSLintOptions = findup('tslint.json');
     if (!defaultTSLintOptions) {
       return null;

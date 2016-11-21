@@ -12,9 +12,13 @@ export function findup(filename: string): string | null {
   while (n--) {
     const folder = currentPaths.slice(0, n).join(path.sep);
     const file = path.join(folder, filename);
-    const stats = fs.statSync(file);
-    if (stats.isFile()) {
-      return file;
+    try {
+      const stats = fs.statSync(file);
+      if (stats.isFile()) {
+        return file;
+      }
+    }
+    catch(err) {
     }
   }
   return null;
