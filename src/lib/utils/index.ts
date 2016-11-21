@@ -18,7 +18,7 @@ export function findup(filename: string): string | null {
         return file;
       }
     }
-    catch(err) {
+    catch (err) {
     }
   }
   return null;

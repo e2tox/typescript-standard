@@ -11,7 +11,7 @@ export class ValidatorOutputFormat {
   static FILELIST_OUTPUT = Formatters.FileslistFormatter;
 
   static getFormatter(formatter: string): Function {
-    switch(formatter) {
+    switch (formatter) {
       case 'prose':
         return ValidatorOutputFormat.PROSE_OUTPUT;
       case 'json':
@@ -28,5 +28,5 @@ export class ValidatorOutputFormat {
         return ValidatorOutputFormat.JSON_OUTPUT;
     }
   }
-  
+
 }

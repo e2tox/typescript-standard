@@ -1607,8 +1607,8 @@ tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-0.14.3.tgz#3da382f670f25ded78d7b3d1792119bca0b7132d"
 
 typescript-standard@latest:
-  version "0.3.10"
-  resolved "https://registry.yarnpkg.com/typescript-standard/-/typescript-standard-0.3.10.tgz#0261555a3a40568c4c36b84e45166d21843205ec"
+  version "0.3.14"
+  resolved "https://registry.yarnpkg.com/typescript-standard/-/typescript-standard-0.3.14.tgz#4d5a2ae65697d1103af1265c47f98038be3cffec"
   dependencies:
     glob latest
     tslint latest
