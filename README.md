@@ -6,6 +6,12 @@
 npm install typescript-standard --save-dev
 ```
 
+## Uninstall
+
+```sh
+npm uninstall typescript-standard --save-dev
+```
+
 ## Usage
 
 package.json
