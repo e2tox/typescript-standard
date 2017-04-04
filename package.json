@@ -13,7 +13,7 @@
     "test": "node_modules/.bin/standard --pretty",
     "build": "npm run build:clean && npm run build:tsc && npm run build:webpack",
     "build:clean": "rm -rf ./bin ./release",
-    "build:tsc": "npm run build:clean && node_modules/.bin/tsc --noEmit -p tsconfig.release.json",
+    "build:tsc": "node_modules/.bin/tsc --noEmit -p tsconfig.release.json",
     "build:webpack": "node_modules/.bin/webpack --display-error-details --config ./webpack.config.ts",
     "prepublish": "npm run build"
   },
