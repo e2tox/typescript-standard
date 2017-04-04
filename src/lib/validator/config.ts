@@ -2,6 +2,7 @@ import * as path from 'path'
 import * as glob from 'glob'
 import { findup, find, load, isDirectory, includesInArray, startsWith } from '../utils'
 import { ValidatorOption } from './option'
+import { Linter } from 'tslint';
 
 export class ValidatorConfigParser {
 
@@ -10,7 +11,7 @@ export class ValidatorConfigParser {
     if (!defaultTSLintOptions) {
       return null;
     }
-    const configuration = load(defaultTSLintOptions);
+    const configuration = Linter.loadConfigurationFromPath(defaultTSLintOptions);
     return new ValidatorOption(format, configuration);
   }
 

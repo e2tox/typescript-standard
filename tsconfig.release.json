@@ -1,15 +1,12 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "es5"
-    ],
+    "target": "es6",
+    "lib": ["es2016"],
     "declaration": true,
     "module": "commonjs",
     "newLine": "LF",
     "removeComments": true,
     "experimentalDecorators": true,
-    "sourceMap": true,
     "outDir": "release",
     "pretty": true
   },

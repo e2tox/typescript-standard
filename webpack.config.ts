@@ -27,7 +27,7 @@ export default [{
   },
   externals: externalNodeModules,
   resolve: {
-    extensions: ['', '.ts']
+    extensions: ['.ts']
   },
   module: {
     loaders: [
@@ -35,7 +35,7 @@ export default [{
     ]
   },
   plugins: [
-    new webpack.BannerPlugin('#!/usr/bin/env node', { raw: 1, entryOnly: 1 })
+    new webpack.BannerPlugin({ banner: '#!/usr/bin/env node', raw: 1, entryOnly: 1 })
     // new webpack.optimize.UglifyJsPlugin({
     //   compress: {
     //     warnings: false
@@ -58,7 +58,7 @@ export default [{
   },
   externals: externalNodeModules,
   resolve: {
-    extensions: ['', '.ts']
+    extensions: ['.ts']
   },
   module: {
     loaders: [

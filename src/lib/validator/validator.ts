@@ -20,7 +20,8 @@ export class Validator {
     const contents = fs.readFileSync(file, 'utf8');
     const linter = new Linter(this.validatorOption.options());
     linter.lint(file, contents, this.validatorOption.configuration);
-    return new ValidateResult(linter.getResult());
+    const results = linter.getResult();
+    return new ValidateResult(results);
   }
 
 }

@@ -10,8 +10,7 @@
       "node_modules/@types/"
     ],
     "types": [
-      "node",
-      "webpack"
+      "node"
     ]
   },
   "formatterOptions": {

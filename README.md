@@ -49,6 +49,9 @@ export PATH=$PATH:node_modules/.bin
 
 ## Updates
 
+### 0.3.30
+  - Support for typescript@2.2.2 and tslint@5.0.0
+
 ### 0.3.2
   - Format ts files when you run `standard --pretty`
 

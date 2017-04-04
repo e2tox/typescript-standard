@@ -1,4 +1,7 @@
 {
+  "jsRules": {
+    "curly": true
+  },
   "rules": {
     "member-access": false,
     "member-ordering": [

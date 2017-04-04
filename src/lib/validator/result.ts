@@ -9,7 +9,7 @@ export class ValidateResult {
   output: string;
 
   constructor(result: LintResult) {
-    this.failureCount = result.failureCount;
+    this.failureCount = result.errorCount;
     this.failures = result.failures;
     this.format = result.format;
     this.output = result.output;
