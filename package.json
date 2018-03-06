@@ -1,6 +1,6 @@
 {
   "name": "typescript-standard",
-  "version": "0.3.30",
+  "version": "0.3.32",
   "engines": {
     "node": ">=4.0.0"
   },
@@ -47,16 +47,17 @@
   },
   "homepage": "https://github.com/e2tox/typescript-standard",
   "devDependencies": {
-    "@types/glob": "latest",
-    "@types/node": "latest",
-    "ts-loader": "latest",
-    "ts-node": "latest",
-    "typescript-standard": "latest",
-    "webpack": "latest"
+    "@types/glob": "^5.0.35",
+    "@types/node": "^9.4.6",
+    "ts-loader": "^4.0.1",
+    "ts-node": "^5.0.1",
+    "typescript-standard": "^0.3.30",
+    "webpack": "^4.1.0"
   },
   "dependencies": {
     "glob": "^7.1.1",
-    "tslint": "^5.0.0",
-    "typescript": "^2.2.2"
+    "tslint": "^5.9.1",
+    "typescript": "^2.7.2",
+    "webpack-cli": "^2.0.10"
   }
 }

@@ -1,11 +1,11 @@
-import { FormatterFunction, ILinterOptions } from 'tslint'
+import { ILinterOptions } from 'tslint'
 import { ValidatorOutputFormat } from './format';
 import { IConfigurationFile } from 'tslint/lib/configuration';
 
 export class ValidatorOption {
 
   configuration?: IConfigurationFile;
-  formatter?: string | FormatterFunction;
+  formatter?: string;
   formattersDirectory?: string;
   rulesDirectory?: string | string[];
 

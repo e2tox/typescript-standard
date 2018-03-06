@@ -53,7 +53,7 @@ export function loadText(file: string): any {
 }
 
 export function saveText(file: string, content: string): any {
-  return fs.writeFileSync(file, content, 'utf8');
+  return fs.writeFileSync(file, content, { encoding: 'utf8' });
 }
 
 export function expend(files: Array<string>): Array<string> {

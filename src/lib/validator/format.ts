@@ -1,8 +1,6 @@
-import { FormatterFunction, Formatters } from 'tslint'
-
 export class ValidatorOutputFormat {
 
-  static getFormatter(formatter: string): string | FormatterFunction {
+  static getFormatter(formatter: string): string {
     if (formatter) {
       return formatter
     }

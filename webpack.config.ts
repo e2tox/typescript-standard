@@ -13,64 +13,69 @@ fs.readdirSync(path.join(projectRoot, 'node_modules'))
     externalNodeModules[mod] = `commonjs ${mod}`
   });
 
-export default [{
-  target: 'node',
-  entry: {
-    cli: './src/bin/cli.ts'
-  },
-  output: {
-    path: path.join(projectRoot, 'bin'),
-    filename: '[name].js'
-  },
-  node: {
-    __dirname: false
-  },
-  externals: externalNodeModules,
-  resolve: {
-    extensions: ['.ts']
-  },
-  module: {
-    loaders: [
-      { test: /\.ts$/, loader: 'ts-loader' }
+export default [
+  {
+    mode: 'development',
+    target: 'node',
+    entry: {
+      cli: './src/bin/cli.ts'
+    },
+    output: {
+      path: path.join(projectRoot, 'bin'),
+      filename: '[name].js'
+    },
+    node: {
+      __dirname: false
+    },
+    externals: externalNodeModules,
+    resolve: {
+      extensions: ['.ts']
+    },
+    module: {
+      rules: [
+        {
+          test: /\.ts$/,
+          loader: 'ts-loader?configFile=' + path.join(projectRoot, 'tsconfig.release.json')
+        }
+      ]
+    },
+    plugins: [
+      new webpack.BannerPlugin({ banner: '#!/usr/bin/env node', raw: true, entryOnly: true })
+      // new webpack.optimize.UglifyJsPlugin({
+      //   compress: {
+      //     warnings: false
+      //   }
+      // })
     ]
-  },
-  plugins: [
-    new webpack.BannerPlugin({ banner: '#!/usr/bin/env node', raw: 1, entryOnly: 1 })
-    // new webpack.optimize.UglifyJsPlugin({
-    //   compress: {
-    //     warnings: false
-    //   }
-    // })
-  ]
-},
-{
-  target: 'node',
-  entry: {
-    index: './src/bin/index.ts'
-  },
-  output: {
-    path: path.join(projectRoot, 'bin'),
-    filename: '[name].js',
-    libraryTarget: 'commonjs'
-  },
-  node: {
-    __dirname: false
-  },
-  externals: externalNodeModules,
-  resolve: {
-    extensions: ['.ts']
-  },
-  module: {
-    loaders: [
-      { test: /\.ts$/, loader: 'ts-loader' }
+  }, {
+    mode: 'development',
+    target: 'node',
+    entry: {
+      index: './src/bin/index.ts'
+    },
+    output: {
+      path: path.join(projectRoot, 'bin'),
+      filename: '[name].js',
+      libraryTarget: 'commonjs'
+    },
+    node: {
+      __dirname: false
+    },
+    externals: externalNodeModules,
+    resolve: {
+      extensions: ['.ts']
+    },
+    module: {
+      rules: [
+        { test: /\.ts$/, loader: 'ts-loader?configFile=' + path.join(projectRoot, 'tsconfig.release.json') }
+      ]
+    },
+    plugins: [
+      // new webpack.optimize.UglifyJsPlugin({
+      //   compress: {
+      //     warnings: false
+      //   }
+      // })
     ]
-  },
-  plugins: [
-    // new webpack.optimize.UglifyJsPlugin({
-    //   compress: {
-    //     warnings: false
-    //   }
-    // })
-  ]
-}
+  }
 ]

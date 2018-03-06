@@ -59,6 +59,9 @@ export PATH=$PATH:node_modules/.bin
 
 ## Updates
 
+### 0.3.32
+  - Support for typescript@2.7.2 and tslint@5.9.1
+
 ### 0.3.30
   - Support for typescript@2.2.2 and tslint@5.0.0
 

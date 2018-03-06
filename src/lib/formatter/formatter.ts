@@ -110,6 +110,6 @@ export class Formatter {
       return false;
     }
 
-}
+  }
 
 }
