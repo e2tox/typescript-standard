@@ -39,6 +39,10 @@ var engine = require('typescript-standard')
 console.log(engine.lint());
 ```
 
+## Extras
+
+[typescript-standard-loader](https://www.npmjs.com/package/typescript-standard-loader) - [Webpack@2+](https://www.npmjs.com/package/webpack) loader
+
 ## Tips
 
 Here is a easier way to run local node_modules by adding the .bin folder into your $PATH variable
