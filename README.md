@@ -1,4 +1,6 @@
-# Zero-configuration TypeScript Standard Validator
+# Zero-configuration TypeScript Standard Validator & Formatter
+
+Validate and format your TypeScript using Visual Studio styles.
 
 ## Installation
 
@@ -58,6 +60,9 @@ export PATH=$PATH:node_modules/.bin
   * [ ] 0.5.x TypeScript Code Standard Autofix (TSLint? maybe)
 
 ## Updates
+
+### 0.3.36
+  - Remove unused dependencies
 
 ### 0.3.32
   - Support for typescript@2.7.2 and tslint@5.9.1

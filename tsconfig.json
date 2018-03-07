@@ -16,6 +16,7 @@
   "formatterOptions": {
     "baseIndentSize": 0,
     "indentSize": 2,
+    "indentStyle": "smart",
     "tabSize": 2,
     "newLineCharacter": "\n",
     "convertTabsToSpaces": true,
@@ -33,6 +34,7 @@
     "placeOpenBraceOnNewLineForControlBlocks": false,
     "insertSpaceAfterTypeAssertion": true,
     "IndentSize": 2,
+    "IndentStyle": "smart",
     "TabSize": 2,
     "NewLineCharacter": "\n",
     "ConvertTabsToSpaces": true,

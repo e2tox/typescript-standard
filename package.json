@@ -1,21 +1,23 @@
 {
   "name": "typescript-standard",
-  "version": "0.3.32",
+  "version": "0.0.0",
   "engines": {
     "node": ">=4.0.0"
   },
-  "description": "Zero-configuration TypeScript Standard Validation",
-  "main": "./bin/index.js",
+  "description": "Zero-configuration TypeScript Standard Validator & Formatter",
+  "main": "bin/index.js",
   "bin": {
-    "standard": "./bin/cli.js"
+    "standard": "bin/cli.js"
   },
   "scripts": {
     "test": "node_modules/.bin/standard --pretty",
-    "build": "npm run build:clean && npm run build:tsc && npm run build:webpack",
+    "build": "npm run build:clean && npm run build:tsc && npm run build:webpack && npm run build:npm",
     "build:clean": "rm -rf ./bin ./release",
     "build:tsc": "node_modules/.bin/tsc --noEmit -p tsconfig.release.json",
     "build:webpack": "node_modules/.bin/webpack --display-error-details --config ./webpack.config.ts",
-    "prepublish": "npm run build"
+    "build:npm": "cp LICENSE README.md tslint.json tsconfig.json ./release && cp package.release.json ./release/package.json",
+    "release": "npm run build && npm run release:npm",
+    "release:npm": "cd ./release && npm publish"
   },
   "files": [
     "bin",
@@ -51,13 +53,13 @@
     "@types/node": "^9.4.6",
     "ts-loader": "^4.0.1",
     "ts-node": "^5.0.1",
-    "typescript-standard": "^0.3.30",
-    "webpack": "^4.1.0"
+    "typescript-standard": "^0.3.32",
+    "webpack": "^4.1.0",
+    "webpack-cli": "^2.0.10"
   },
   "dependencies": {
     "glob": "^7.1.1",
     "tslint": "^5.9.1",
-    "typescript": "^2.7.2",
-    "webpack-cli": "^2.0.10"
+    "typescript": "^2.7.2"
   }
 }

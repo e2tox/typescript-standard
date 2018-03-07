@@ -13,6 +13,8 @@ fs.readdirSync(path.join(projectRoot, 'node_modules'))
     externalNodeModules[mod] = `commonjs ${mod}`
   });
 
+const outputDir = path.join(__dirname, 'release');
+
 export default [
   {
     mode: 'development',
@@ -21,7 +23,7 @@ export default [
       cli: './src/bin/cli.ts'
     },
     output: {
-      path: path.join(projectRoot, 'bin'),
+      path: path.join(outputDir, 'bin'),
       filename: '[name].js'
     },
     node: {
@@ -54,7 +56,7 @@ export default [
       index: './src/bin/index.ts'
     },
     output: {
-      path: path.join(projectRoot, 'bin'),
+      path: path.join(outputDir, 'bin'),
       filename: '[name].js',
       libraryTarget: 'commonjs'
     },

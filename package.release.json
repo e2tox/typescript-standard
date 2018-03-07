@@ -1,0 +1,46 @@
+{
+  "name": "typescript-standard",
+  "version": "0.3.36",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "description": "Zero-configuration TypeScript Standard Validator & Formatter",
+  "main": "bin/index.js",
+  "bin": {
+    "standard": "bin/cli.js"
+  },
+  "files": [
+    "bin",
+    "LICENSE",
+    "README.md",
+    "tsconfig.json",
+    "tslint.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/e2tox/typescript-standard.git"
+  },
+  "keywords": [
+    "format",
+    "pretty",
+    "tslint",
+    "typescript",
+    "standard",
+    "fmt",
+    "ts"
+  ],
+  "author": {
+    "name": "Ling Zhang",
+    "url": "https://e2.to/x"
+  },
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/e2tox/typescript-standard/issues"
+  },
+  "homepage": "https://github.com/e2tox/typescript-standard",
+  "dependencies": {
+    "glob": "^7.1.1",
+    "tslint": "^5.9.1",
+    "typescript": "^2.7.2"
+  }
+}
