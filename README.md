@@ -57,7 +57,7 @@ export PATH=$PATH:node_modules/.bin
   * [x] TypeScript Code Standard Validation (TSLint)
   * [x] 0.3.x TypeScript Code Pretty Printer (tsc)
   * [ ] 0.4.x TypeScript Code Import Formatter (ts-format-imports)
-  * [ ] 0.5.x TypeScript Code Standard Autofix (TSLint? maybe)
+  * [ ] 0.5.x TypeScript Code Standard Autofix (Prettier)
 
 ## Updates
 
@@ -95,3 +95,6 @@ export PATH=$PATH:node_modules/.bin
 
   - Imported official typescript standard rules from Microsoft repository.
   - The `file` and `exclude` from `tsconfig.json` is supported.
+
+### About
+BTW, this is my first typescript project and the reason behind this project is because I know I am going to build elegance typescript frameworks. I need a tool to make it happen.
